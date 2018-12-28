@@ -13,11 +13,11 @@ def geo(p) :
     x += 1
   return x
 
-def avggeo(p, x):
+def avggeo(p):
   total = 0
-  for i in range(x):
+  for i in range(100000):
     total += geo(p)
-  return total/(x*1.0)
+  return total/100000.0
 
 def hypgeo(k, p) :
   x = 0
@@ -34,9 +34,9 @@ def poi(n, l) :
 def exp(n, l):
   return geo(l/float(n))
 
+
 print 'bin ', bin(20, 0.4)
 print 'geo ', geo(0.03)
-print 'avggeo ', avggeo(0.03, 100000)
 print 'hypgeo ', hypgeo(5, 0.03)
 print 'poi ', poi(60000, 3.1)
 print 'exp', exp(60000, 3.1)
